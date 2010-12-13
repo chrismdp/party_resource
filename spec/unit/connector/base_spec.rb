@@ -55,7 +55,7 @@ describe PartyResource::Connector::Base do
 
       it 'stores the options' do
         subject.options.should == {
-          :base_uri => normalized_uri, 
+          :base_uri => normalized_uri,
           :basic_auth => { :password => password, :username => username },
           :headers => { "X" => "Y" }
         }

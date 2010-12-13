@@ -54,6 +54,7 @@ module PartyResource
         if requires_basic_auth(options)
           set_option(:basic_auth, :username => options[:username], :password => options[:password])
         end
+        @options[:headers] = options[:headers] if options.has_key?(:headers)
       end
 
       def set_headers(options)
